@@ -32,7 +32,7 @@ var TENTHS_LESS_THAN_HUNDRED : string [] = [
  */
 function toWords(number : number, asOrdinal : boolean) : string {
     var words : string;
-    var num = parseInt(number, 10);
+    var num : number= parseInt(number, 10);
 
     if (!isFinite(num)) {
         throw new TypeError(
@@ -49,7 +49,7 @@ function toWords(number : number, asOrdinal : boolean) : string {
 }
 
 function generateWords(number : number) : string {
-    var remainder : string;
+    var remainder : number;
     var word : string;
     var words : string [] = arguments[1];
 
