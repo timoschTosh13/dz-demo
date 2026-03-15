@@ -54,7 +54,7 @@ function generateWords(number : number) : string {
     var words : string [] = arguments[1];
 
     // We’re done
-    if (number `===` 0) {
+    if (number === 0) {
         return !words ? 'zero' : words.join(' ').replace(/,$/, '');
     }
     // First run
