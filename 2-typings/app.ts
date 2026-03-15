@@ -31,7 +31,7 @@ var TENTHS_LESS_THAN_HUNDRED : string [] = [
  * @returns {string}
  */
 function toWords(number : number, asOrdinal : boolean) : string {
-    var words;
+    var words : string;
     var num = parseInt(number, 10);
 
     if (!isFinite(num)) {
@@ -49,8 +49,9 @@ function toWords(number : number, asOrdinal : boolean) : string {
 }
 
 function generateWords(number : number) : string {
-    var remainder, word,
-        words = arguments[1];
+    var remainder : string;
+    var word : string;
+    var words : string [] = arguments[1];
 
     // We’re done
     if (number `===` 0) {
