@@ -1,7 +1,8 @@
-export {};
+enum Gender {
+	female,
+	male
+}
 
-
-type Gender = 'female' | 'male'
 type Hair = {
 	color: string,
 	type: string
@@ -75,6 +76,8 @@ interface User {
 }
 
 async function getUsers(): Promise<User[]> {
+		
+	try {
 		const res = await fetch('https://dummyjson.com/users');
 
 		if(!res.ok){
@@ -85,7 +88,11 @@ async function getUsers(): Promise<User[]> {
 
 		console.log(data)
 
-		return data
+		return data	
+	} catch (error) {
+		throw new Error("OMG!")
+	}
+	
 }
 
 getUsers()
